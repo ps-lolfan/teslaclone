@@ -32,6 +32,7 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
 
                 <DownArrow src='/images/down-arrow.svg' />
             </Buttons>
+
         </Wrap>
     )
 }
@@ -78,6 +79,7 @@ const LeftButton = styled.div`
     opacity: 0.85;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
     margin: 8px; 
 `

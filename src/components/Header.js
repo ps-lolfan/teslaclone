@@ -4,14 +4,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
+import { Grid } from '@material-ui/core'
+
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
     const cars = useSelector(selectCars);
-    console.log(cars)
     return (
         <Container>
-            <a>
+            <a href="https://www.linkedin.com/in/praveen-sinnur/" target="_blank">
                 <img src="/images/logo.svg" alt="" />
             </a>
             <Menu>
@@ -35,6 +36,26 @@ function Header() {
                 <li><a href="#">Trade-in</a></li>
                 <li><a href="#">Cybertruck</a></li>
                 <li><a href="#">Roadaster</a></li>
+                <li><a href="https://www.linkedin.com/in/praveen-sinnur/" target='_blank'>
+                    <Grid container spacing={1}>
+                        <Grid item>
+                            Built with
+
+                        </Grid>
+                        <Grid item>
+                            <img src="/images/heart.png" alt="" style={{
+                                height: '18px',
+                                width: '18px',
+                            }} />
+                          
+
+                        </Grid>
+                        <Grid item>
+                             praveen sinnur
+                        </Grid>
+                    </Grid>
+                </a></li>
+
             </BurgerNav>
         </Container>
     )
