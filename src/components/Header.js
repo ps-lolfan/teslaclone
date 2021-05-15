@@ -16,28 +16,25 @@ function Header() {
             </a>
             <Menu>
                 {cars && cars.map((car, index) => (<a key={index} href="#">{car}</a>))}
-               </Menu>
+            </Menu>
             <RightMenu>
                 <a href="#">Shop now</a>
                 <a href="#">Tesla Account</a>
-                <CustomMenu onClick = { () => setBurgerStatus(true)} />
+                <CustomMenu onClick={() => setBurgerStatus(true)} />
             </RightMenu>
 
             <BurgerNav show={burgerStatus}>
                 <CloseWrapper>
-                    <CustomClose onClick = { () => setBurgerStatus(false)} />
+                    <CustomClose onClick={() => setBurgerStatus(false)} />
                 </CloseWrapper>
                 {cars && cars.map((car, index) => (
-                <li><a key={index} href="#">{car}</a></li>
+                    <li><a key={index} href="#">{car}</a></li>
                 ))}
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-in</a></li>
                 <li><a href="#">Cybertruck</a></li>
                 <li><a href="#">Roadaster</a></li>
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Existing Inventory</a></li>
-
             </BurgerNav>
         </Container>
     )
@@ -123,7 +120,7 @@ const CustomClose = styled(CloseIcon)`
 
 `
 
-const CloseWrapper = styled.div `
+const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
 `
